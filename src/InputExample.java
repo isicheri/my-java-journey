@@ -3,9 +3,6 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class InputExample {
-    enum Days { MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY}
-
-
     public static void countNum(int[]  a, int v) {
         int count = 0;
         for (int i = 0; i < a.length; i++) {
@@ -29,13 +26,21 @@ public class InputExample {
 //        Scanner scn = new Scanner(System.in);
 //        int num = scn.nextInt();
 //        int randNum = new Random().nextInt(10,11);
-//
 //        System.out.println(randNum);
-
-        Days day = Days.valueOf("MONDAY");
-        System.out.println(day);
-
 //        InputExample.countNum(new int[]{2,4,5,2,6,2,7,2},2);
-        InputExample.formatName("dominion","isicheri");
+//        InputExample.formatName("dominion","isicheri");
+
+        Scanner scn = new Scanner(System.in);
+
+        System.out.println("enter your height in centimeters");
+
+        float height = scn.nextFloat();
+        System.out.print("Enter your weight in kilograms: ");
+
+        float weight = scn.nextFloat();
+        float bmi = weight/(height * height) * 10000;
+
+        System.out.println("your body mass index is: " + bmi + ".");
+
     }
 }
