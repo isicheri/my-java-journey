@@ -1,10 +1,12 @@
 package practice;
 
 import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class DeleteEvidence {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         File file = new File("./src/text.txt");
         Scanner scn = new Scanner(System.in);
         char reply;
@@ -20,6 +22,19 @@ public class DeleteEvidence {
             } else {
                 System.out.println("Sorry, buddy. Just asking.");
             }
-            }
 
+//        int[] guests = new int[10];
+//
+//        Scanner scn = new Scanner(new File("./src/text.txt"));
+//
+//        for (int i = 0; i < 10; i++) {
+//            guests[i] = scn.nextInt();
+//        }
+
+//        for (int i = 0; i < 10; i++) {
+//            System.out.println("room No");
+//            System.out.println("/t");
+//            System.out.println(guests[i]);
+//        }
     }
+}

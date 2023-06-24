@@ -1,5 +1,6 @@
 package practice;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practice {
@@ -8,6 +9,8 @@ public class Practice {
 //        value of each base type from the standard input device and prints it back to the
 //        standard output device.
     public static void InputAllBaseType() {
+
+        //unfinished
         Scanner scanner = new Scanner(System.in);
 
         double i = (double) scanner.nextInt();
@@ -58,15 +61,35 @@ public class Practice {
 
 
 
+//public static void formWord(char[] a) {
+//
+//}
+
 //    Write a short Java program that takes two arrays a and b of length n storing int
 //    values, and returns the dot product of a and b. That is, it returns an array c of
 //    length n such that c[i] = a[i] · b[i], for i = 0,… ,n − 1.
 
-    
+
+    public static void productArr(int[] a, int[] b,int n) {
+        // the variable n is the length of both array a and b which is the
+        //same
+        int[] c = new int[n];
+        for (int i = 0; i < n; i++) {
+            c[i] = a[i] * b[i];
+        }
+        System.out.println(Arrays.toString(c));
+    }
+
+    /**
+     * The birthday paradox says that the probability that two people in a room will
+     * have the same birthday is more than half as long as n, the number of people in
+     * the room, is more than 23. This property is not really a paradox, but many
+     * people find it surprising. Design a Java program that can test this paradox by a
+     * series of experiments on randomly generated birthdays, which test this paradox
+     * for n = 5,10,15,20,…, 100.
+     * **/
+
     public static void main(String[] args) {
-//    Practice.smallInt(9);
-//        Practice.oddSum(9);
-        int[] a = new int[]{2,4,5,6,7,8,9,1,7};
-        Practice.checkOdd(a);
+        Practice.productArr(new int[]{1,2,3},new int[]{4,5,6},3);
     }
 }
